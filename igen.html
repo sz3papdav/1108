@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlap példa</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="szovegdoboz">Szöveg:</label>
+        <input type="text" id="szovegdoboz" name="szoveg">
+        <button type="submit" id="submitButton">Küldés</button>
+    </form>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); 
+            var szoveg = document.getElementById("szovegdoboz").value;
+            console.log(szoveg);
+        }
+        var submitButton = document.getElementById("submitButton");
+        submitButton.addEventListener("click", handleFormSubmit);
+    </script>
+</body>
+</html>
